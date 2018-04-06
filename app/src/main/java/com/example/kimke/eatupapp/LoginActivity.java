@@ -10,8 +10,8 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String USER_NAME_TEXT = "com.example.kimke.eatupapp.USER_NAME_TEXT";
     private EditText userNameInput;
-    private EditText userPasswordInput;
     private Button loginButton;
 
     @Override
@@ -23,15 +23,17 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userNameInput = findViewById(R.id.loginInput);
-                userPasswordInput = findViewById(R.id.passwordInput);
                 openHomeActivity();
             }
         });
     }
 
     public void openHomeActivity() {
+        userNameInput = findViewById(R.id.loginInput);
+        String userName = userNameInput.getText().toString();
+
         Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtra(USER_NAME_TEXT, userName);
         startActivity(intent);
     }
 }
