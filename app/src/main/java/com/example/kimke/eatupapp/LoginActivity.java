@@ -23,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                userNameInput = findViewById(R.id.loginInput);
+                userPasswordInput = findViewById(R.id.passwordInput);
                 openHomeActivity();
             }
         });
