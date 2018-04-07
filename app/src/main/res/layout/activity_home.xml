@@ -7,6 +7,17 @@
     tools:context=".HomeActivity">
 
     <ImageView
+        android:id="@+id/background"
+        android:layout_width="387dp"
+        android:layout_height="566dp"
+        android:background="@drawable/background-21"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:srcCompat="@drawable/background-21"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ImageView
         android:id="@+id/recipes"
         android:layout_width="130dp"
         android:layout_height="103dp"
