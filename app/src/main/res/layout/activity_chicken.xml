@@ -8,36 +8,6 @@
     android:visibility="visible"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/recipeTitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="244dp"
-        android:fontFamily="@font/oswald_light"
-        android:text="My Creations"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="166dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ezraCreations"
-        app:srcCompat="@drawable/ezracreation2" />
-
     <ImageButton
         android:id="@+id/recipes"
         android:layout_width="130dp"
@@ -78,78 +48,89 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/home" />
 
-    <ImageView
-        android:id="@+id/ezraBanner"
-        android:layout_width="424dp"
-        android:layout_height="156dp"
-        android:background="#676766"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/ezraName"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="386dp"
+        android:layout_height="647dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ezra_small" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
-        android:id="@+id/ezraName"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:id="@+id/recipeOfTheWeek"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/chickenTop"
         android:fontFamily="@font/oswald_light"
-        android:text="Ezra Phillips"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ezraCreations"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:id="@+id/recipeTitleText"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="@font/oswald_light"
-        android:text="My Creations"
+        android:text="FRESH CHICKEN BREAST"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/ezraDescription"
+    <EditText
+        android:id="@+id/ingredients"
+        android:layout_width="193dp"
+        android:layout_height="280dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/boxes_rounded_corners2"
+        android:ems="10"
+        android:fontFamily="@font/oswald_light"
+        android:inputType="textMultiLine"
+        android:text="Ingredients\n\n3 Tablespoons Oil\nPinch of Salt\nPinch of Pepper\n2 Chicken Breasts\n2 Cups of Carrots\n2 Potatoes\n1 Bag of Precooked Rice"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitleText" />
+
+    <Button
+        android:id="@+id/startCooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="132dp"
         android:fontFamily="@font/oswald_light"
-        android:text="EzraPhillips_@txstate.edu"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
+        android:text="START COOKING"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ezraName" />
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitleText" />
 
-    <ImageView
-        android:id="@+id/ezraCreations2"
-        android:layout_width="159dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ezraCreations"
-        app:srcCompat="@drawable/ezracreation1" />
 
 </android.support.constraint.ConstraintLayout>

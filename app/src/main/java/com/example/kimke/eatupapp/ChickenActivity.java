@@ -4,28 +4,31 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class RecipeActivity extends AppCompatActivity implements View.OnClickListener{
+public class ChickenActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton recipes, home, profile, chicken;
+    private ImageButton recipes, home, profile;
+    private Button timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipe);
+        setContentView(R.layout.activity_home);
 
         recipes = findViewById(R.id.recipes);
         home = findViewById(R.id.home);
         profile = findViewById(R.id.profile);
-        chicken = findViewById(R.id.recipe1Img);
+        timer = findViewById(R.id.startCooking);
 
         recipes.setOnClickListener(this);
         home.setOnClickListener(this);
         profile.setOnClickListener(this);
-        chicken.setOnClickListener(this);
+        timer.setOnClickListener(this);
     }
 
     @Override
@@ -40,8 +43,8 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.profile:
                 openProfileActivity();
                 break;
-            case R.id.recipe1Img:
-                openChickenActivity();
+            case R.id.startCooking:
+                openTimerActivity();
                 break;
         }
     }
@@ -61,8 +64,8 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         startActivity(intent);
     }
 
-    public void openChickenActivity() {
-        Intent intent = new Intent(this, ChickenActivity.class);
+    public void openTimerActivity() {
+        Intent intent = new Intent(this, TimerActivity.class);
         startActivity(intent);
     }
 }

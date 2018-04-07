@@ -19,7 +19,8 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".RecipeActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".TimerActivity"></activity>
+        <activity android:name=".TimerActivity" />
+        <activity android:name=".ChickenActivity"></activity>
     </application>
 
 </manifest>
