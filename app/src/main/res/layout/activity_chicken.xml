@@ -68,7 +68,7 @@
         android:id="@+id/recipeOfTheWeek"
         android:layout_width="match_parent"
         android:layout_height="88dp"
-        android:background="@drawable/chickenTop"
+        android:background="@drawable/chickentop"
         android:fontFamily="@font/oswald_light"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

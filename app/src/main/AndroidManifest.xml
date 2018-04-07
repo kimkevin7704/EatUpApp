@@ -20,7 +20,8 @@
         <activity android:name=".RecipeActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".TimerActivity" />
-        <activity android:name=".ChickenActivity"></activity>
+        <activity android:name=".ChickenActivity" />
+        <activity android:name=".FoodTypeActivity"></activity>
     </application>
 
 </manifest>
