@@ -13,8 +13,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private TextView userWelcome;
     private Button recipes, home, profile;
 
-    private Button timer; //for testing Timer
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -30,11 +28,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         recipes = findViewById(R.id.recipes);
         home = findViewById(R.id.home);
         profile = findViewById(R.id.profile);
-
-        //For Testing Timer
-        timer = findViewById(R.id.toTimer);
-        timer.setOnClickListener(this);
-
 
         recipes.setOnClickListener(this);
         home.setOnClickListener(this);
@@ -52,12 +45,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.profile:
                 openProfileActivity();
-                break; //<-- delete if done with Timer Testing.
-
-            //This is for Testing the Timer Activity
-            case R.id.toTimer:
-                openTimerActivity();
-                break;
         }
     }
 
@@ -73,12 +60,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     public void openHomeActivity() {
         Intent intent = new Intent( this, HomeActivity.class);
-        startActivity(intent);
-    }
-
-    public void openTimerActivity()
-    {
-        Intent intent = new Intent(this, TimerActivity.class);
         startActivity(intent);
     }
 }
