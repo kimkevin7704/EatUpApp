@@ -6,24 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView userWelcome;
-    private Button recipes, home, profile;
+    private ImageButton recipes, home, profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra(LoginActivity.USER_NAME_TEXT);
-
-        userWelcome = findViewById(R.id.userWelcome);
-        userWelcome.setText("Welcome " + userName + "!");
 
         recipes = findViewById(R.id.recipes);
         home = findViewById(R.id.home);

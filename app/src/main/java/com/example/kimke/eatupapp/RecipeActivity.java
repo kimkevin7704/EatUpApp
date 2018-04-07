@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class RecipeActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button recipes, home, profile;
+    private ImageButton recipes, home, profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

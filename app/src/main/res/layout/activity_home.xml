@@ -8,35 +8,74 @@
     android:visibility="visible"
     tools:context=".HomeActivity">
 
-    <ImageView
+    <TextView
+        android:id="@+id/sponsor"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="420dp"
+        android:fontFamily="@font/oswald_light"
+        android:text="SPONSORED BY"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recipeOfWeekName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/oswald_light"
+        android:text="Fresh Chicken Breast"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
         android:id="@+id/recipes"
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/home"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/recipes" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/profile"
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/home"
         app:srcCompat="@drawable/profile" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/home"
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,14 +87,25 @@
         android:layout_height="76dp"
         android:background="#676766"
         android:fontFamily="@font/oswald_light"
-        android:text="   RECIPE OF THE WEEK"
-        android:textAlignment="textStart"
+        android:text="RECIPE OF THE WEEK"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="296dp"
+        android:layout_height="266dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeOfWeekName"
+        app:srcCompat="@drawable/creations1" />
 
 </android.support.constraint.ConstraintLayout>
