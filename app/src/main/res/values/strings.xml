@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EatUpApp</string>
+    <string name="StartTimer">Start</string>
+    <string name="PauseTimer">Pause</string>
 </resources>
